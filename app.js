@@ -9,7 +9,8 @@ app.get('/', async (req,res)=>{
     'X-FORWARDED-FOR': req.header('x-forwarded-for') || null, 
     'REQ.CONNECTION.REMOTEADDRESS': req.connection.remoteAddress || null,
     'REQ.IP': req.ip || null,
-    'SERVER_IP': response.data.ip || null
+    'REQ.IPS': req.ips || null,
+    'HEROKU_SERVER_IP': response.data.ip || null
   })
 })
 
